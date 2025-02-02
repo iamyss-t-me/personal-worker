@@ -49,7 +49,7 @@ async def start_worker(message, client):
                     await asyncio.sleep(5)
                     photo = random.choice(os.listdir("ss"))
 
-                    await client.send_photo(chat_id=Config.MAIN_CHANNEL,
+                    await client.send_photo(chat_id=int(Config.MAIN_CHANNEL),
                                             photo=f"SS/{photo}",
                                             caption=text.format(title=video.title,id=video.id)
                                             )
