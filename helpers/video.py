@@ -47,7 +47,7 @@ async def screenshots(client):
     for i in range(1,int(Config.SCREENSHOTS_COUNT)+1):
         if i/3 == 0:await asyncio.sleep(4)
         capture_frame("video.mp4",n*i,f"ss/{i}.jpg")
-        image = await client.send_photo(Config.CHANNEL_ID,f"ss/{i}.jpg")
+        image = await client.send_photo(int(Config.CHANNEL_ID),f"ss/{i}.jpg")
         await asyncio.sleep(1)
         images.append(Screenshot(id=image.id,url=f"ss/{i}.jpg",timestamp=seconds_to_hms(i*10)))
         thumbnail = random.choice(os.listdir("ss"))
