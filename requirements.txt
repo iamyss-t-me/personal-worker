@@ -1,0 +1,14 @@
+requests
+seedrcc
+pydantic
+pymongo
+dnspython
+feedparser
+pyrofork
+python-dotenv
+tgcrypto
+seedrcc
+imageio[ffmpeg]
+pillow
+fastapi
+uvicorn
