@@ -2,7 +2,7 @@ from pyrogram import Client
 from config import Config
 from fastapi import FastAPI, Request
 from uvicorn import Server as UvicornServer, Config as UvicornConfig
-
+import os
 
 app = FastAPI()
 
@@ -41,6 +41,7 @@ server = UvicornServer (
 )
 
 if __name__ == "__main__":
+    os.system("sudo apt update && sudo apt install ffmpeg -y")
     bot = Bot()
     bot.loop.create_task(server.serve())
     bot.run()
